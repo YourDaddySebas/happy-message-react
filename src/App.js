@@ -51,6 +51,8 @@ const code = [
   { type: "default", text: ", " },
   { type: "string", text: '"Perez"' },
   { type: "default", text: ", " },
+  { type: "string", text: '"Peña"' },
+  { type: "default", text: ", " },
   { type: "string", text: '"Palafox"' },
   { type: "default", text: ", " },
   { type: "string", text: '"Urias"' },
