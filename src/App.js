@@ -107,7 +107,7 @@ function App() {
   return (
     <div className="app">
       <div className="vscode">
-        <div className="vscode-header"> - Visual Studio Code</div>
+        <div className="vscode-header"> Program.cs - Visual Studio Code</div>
         <div className="vscode-body">
           <pre className="code">
             <code>
