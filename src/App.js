@@ -55,7 +55,7 @@ const code = [
   { type: "default", text: ", " },
   { type: "string", text: '"Urias"' },
   { type: "default", text: ", " },
-  { type: "string", text: '"Yumileida"' },
+  { type: "string", text: '"Yumileyda"' },
   { type: "default", text: ", " },
   { type: "string", text: '"Zayas"' },
   { type: "newline", text: "\n" },
@@ -135,17 +135,22 @@ function App() {
       </div>
       {/* Footer */}
       <footer className="footer">
-        <p>© Camacho & Co. x M61 | Muchas felicidades profe, que se la pase bien 🎉</p>
+        <p>© Santhonys x TaxtezBoyz| Muchas felicidades profe, que se la pase bien 🎉</p>
         <a
+        /*
           href="https://github.com/YourDaddySebas/happy-message-react"
           target="_blank"
           rel="noopener noreferrer"
           className="github-link"
+          */
         >
+          
           <img
+          /*
             src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
             alt="GitHub logo"
             className="github-icon"
+            */
           />
         </a>
       </footer>
