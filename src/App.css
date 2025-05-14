@@ -1,38 +1,196 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Fondo del editor */
+body {
+  margin: 0;
+  padding: 0;
+  background: #1e1e1e;
+  color: #ffffff;
+  font-family: 'Courier New', monospace;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden; /* Evitar desbordamiento en pantallas pequeñas */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Simulación del editor de Visual Studio Code */
+.vscode {
+  flex: 1;
+  width: 80%;
+  max-width: 960px; /* Máximo ancho para pantallas grandes */
+  height: auto;
+  background: #1e1e1e;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Barra superior */
+.vscode-header {
+  background: #333333;
+  color: #ffffff;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Cuerpo del editor */
+.vscode-body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  color: #d4d4d4;
+}
+
+/* Código */
+.code {
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+/* Footer */
+.footer {
+  width: 80%;
+  max-width: 960px; /* Máximo ancho para pantallas grandes */
+  background: #333333;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 5px 5px; /* Redondea las esquinas inferiores */
+  margin-top: -5px; /* Elimina el espacio entre el editor y el footer */
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer .github-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.github-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  filter: invert(1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .vscode {
+    width: 95%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .code {
+    font-size: 14px;
+    line-height: 1.4;
   }
+
+  .footer {
+    width: 95%;
+    font-size: 12px;
+    padding: 8px 15px;
+    flex-direction: column; /* Cambia el diseño a vertical en pantallas más pequeñas */
+    gap: 5px;
+  }
+
+  .footer p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .vscode {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .vscode-body {
+    padding: 15px; /* Reducir padding para pantallas pequeñas */
+  }
+
+  .code {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  .footer {
+    width: 100%;
+    font-size: 10px;
+    padding: 6px 10px;
+    border-radius: 0;
+    gap: 5px;
+  }
+
+  .github-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Código */
+.code {
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+/* Colores de sintaxis */
+.keyword {
+  color: #569cd6;
+}
+
+.string {
+  color: #d69d85;
+}
+
+.comment {
+  color: #6a9955;
+}
+
+.parameter {
+  color: #9cdcfe;
+}
+
+.operator {
+  color: #d4d4d4;
+}
+
+.parenthesis {
+  color: #d4d4d4;
+}
+
+.default {
+  color: #d4d4d4;
+}
+
+/* Cursor parpadeante */
+.cursor {
+  display: inline-block;
+  background-color: #ffffff;
+  width: 8px;
+  height: 18px;
+  vertical-align: middle;
+  animation: blink 0.5s step-end infinite;
 }
