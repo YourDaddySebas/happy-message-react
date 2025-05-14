@@ -57,7 +57,7 @@ const code = [
   { type: "default", text: ", " },
   { type: "string", text: '"Urias"' },
   { type: "default", text: ", " },
-  { type: "string", text: '"Yumileyda"' },
+  { type: "string", text: '"Jacobo"' },
   { type: "default", text: ", " },
   { type: "string", text: '"Zayas"' },
   { type: "newline", text: "\n" },
